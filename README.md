@@ -63,3 +63,8 @@ Here are a few potential areas for future improvement and development of the PPE
 ## **Acknowledgments**
  * This project is based on the YOLOv8 implementation by [Prashant Khobragade](https://github.com/Prashantkhobragade) and [Ultralytics](https://github.com/ultralytics).
 
+## **License**
+ [MIT License](https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt)
+ 
+ Feel free to contribute to this project by opening issues, submitting pull requests, or suggesting improvements. Happy detecting!
+
