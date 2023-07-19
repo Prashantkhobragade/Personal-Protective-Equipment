@@ -1,37 +1,23 @@
-from fastapi import APIRouter, File, UploadFile, HTPPException
-from fastapi.responses import FileResponse
 from ultralytics import YOLO
 import cv2
 import cvzone
-import numpy as np
 import math
 
+def ppe_detection(cap):
+    model = YOLO("ppe.pt")
 
-router = APIRouter()
+    classNames = ['Hardhat', 'Mask', 'NO-Hardhat', 'NO-Mask', 'NO-Safety Vest', 'Person', 'Safety Cone',
+                'Safety Vest', 'machinery', 'vehicle']
 
-model = YOLO("ppe.pt")
-
-classNames = ['Hardhat', 'Mask', 'NO-Hardhat', 'NO-Mask', 'NO-Safety Vest', 'Person', 'Safety Cone',
-              'Safety Vest', 'machinery', 'vehicle']
-
-@router.post("/detect")
-def detect(im:UploadFile):
-    if im.filename.split(".")[-1] in ("mp4"):
-        pass
-    else:
-        raise HTTPException(
-            status_code=415, detail="Not an Image"
-        )
-        
     MyColor = (0,0,255)
     while True:
-        success, img = im.read()
+        success, img = cap.read()
         results = model(img, stream=True)
 
         for r in results:
             boxes = r.boxes
             for box in boxes:
-            #bonding box
+                #bonding box
                 x1, y1, x2, y2 = box.xyxy[0]
                 x1, y1, x2, y2 = int(x1), int(y1), int(x2), int(y2)
                 w, h = x2-x1, y2-y1
@@ -61,10 +47,9 @@ def detect(im:UploadFile):
                     cv2.rectangle(img, (x1,y1),(x2,y2), MyColor,3)
 
 
+        
+        
+        detect_obj = cv2.imshow("image", img)
+        #w_key = cv2.waitKey(0)
     
-    
-            cv2.imshow("image", img)
-            cv2.waitKey(1)
-        return 
-
-    
+    return detect_obj
