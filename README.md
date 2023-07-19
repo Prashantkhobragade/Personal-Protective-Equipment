@@ -15,8 +15,11 @@ This project is an implementation of PPE (Personal Protective Equipment) object 
 The model can be employed at entry and exit points of construction sites to identify and grant access only to authorized personnel wearing the proper safety gear, helping to maintain a safe working environment and prevent unauthorized access.
 
 
-### Result
+### **Results**
 ![Training_Result](https://github.com/Prashantkhobragade/Personal-Protective-Equipment/blob/main/Report/results.png)
+
+**Training Dataset**
+![Image](https://github.com/Prashantkhobragade/Personal-Protective-Equipment/blob/main/Report/train_batch14672.jpg)
 
 
 ## **How To Run?**
@@ -56,7 +59,7 @@ Here are a few potential areas for future improvement and development of the PPE
 
  **1. Model Ensembling:** Combine multiple trained YOLOv8 models through model ensembling techniques, such as weighted average or non-maximum suppression (NMS), to improve detection accuracy and reduce false positives.
 
- **2. Hyperparameter Tuning:** Fine-tune the hyperparameters of the YOLOv8 model, such as learning rate, batch size, and number of epochs, to optimize the training process and improve detection accuracy.
+ **2. Hyperparameter Tuning:** Fine-tune the hyperparameters of the YOLOv8 model, such as learning rate, batch size, and number of epochs, to optimize the training process and improve detection accuracy. This Model is trained for 50 epochs.
 
 **3. User Interface:** Develop a user-friendly web or mobile application to visualize the PPE detection results and provide an intuitive interface for users to interact with the model.
 
