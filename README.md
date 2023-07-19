@@ -60,4 +60,6 @@ Here are a few potential areas for future improvement and development of the PPE
 
 **3. User Interface:** Develop a user-friendly web or mobile application to visualize the PPE detection results and provide an intuitive interface for users to interact with the model.
 
+## **Acknowledgments**
+ * This project is based on the YOLOv8 implementation by [Prashant Khobragade](https://github.com/Prashantkhobragade) and [Ultralytics](https://github.com/ultralytics).
 
